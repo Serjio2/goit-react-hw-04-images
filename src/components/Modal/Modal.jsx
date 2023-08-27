@@ -3,7 +3,7 @@ import css from "./Modal.module.css";
 
 Modal.setAppElement('#root');
 
-export const ModalWin = ({ isModalOpen, imgModal, isModalClose }) => {
+export const ModalWin = ({ isModalOpen, largeImageURL, tags, isModalClose }) => {
   return (
     <Modal
       isOpen={isModalOpen}
@@ -11,7 +11,7 @@ export const ModalWin = ({ isModalOpen, imgModal, isModalClose }) => {
       className={css.Modal}
       overlayClassName={css.Overlay}
     >
-      <img src={imgModal.largeImageURL} alt={imgModal.tags} />
+      <img src={largeImageURL} alt={tags} />
     </Modal>
   );
 };
